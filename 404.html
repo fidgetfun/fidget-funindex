@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#c8e7ff" />
+  <meta name="description" content="Fidget Fun — something fun is coming soon." />
+  <title>Fidget Fun | Coming Soon</title>
+  <style>
+    :root {
+      --baby-blue: #c8e7ff;
+      --baby-blue-deep: #8cc8f4;
+      --dust-pink: #eeb6c5;
+      --dust-pink-soft: #f8dce4;
+      --violet: #7b55c7;
+      --violet-deep: #5634a2;
+      --ink: #352d45;
+      --white: #fffdfd;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: ui-rounded, "SF Pro Rounded", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,.96) 0 7%, transparent 31%),
+        radial-gradient(circle at 84% 20%, rgba(238,182,197,.42) 0 8%, transparent 32%),
+        radial-gradient(circle at 80% 86%, rgba(123,85,199,.20) 0 9%, transparent 32%),
+        linear-gradient(145deg, #eaf7ff 0%, #f9e8ed 50%, #eee7ff 100%);
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 260px;
+      height: 260px;
+      border-radius: 48% 52% 59% 41% / 44% 42% 58% 56%;
+      filter: blur(2px);
+      opacity: .25;
+      z-index: -1;
+      animation: drift 12s ease-in-out infinite alternate;
+    }
+
+    body::before {
+      left: -90px;
+      top: 60%;
+      background: var(--baby-blue-deep);
+    }
+
+    body::after {
+      right: -100px;
+      top: 8%;
+      background: var(--dust-pink);
+      animation-delay: -4s;
+    }
+
+    @keyframes drift {
+      to { transform: translate3d(20px, -24px, 0) rotate(8deg); }
+    }
+
+    .page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 36px 20px;
+    }
+
+    .card {
+      width: min(920px, 100%);
+      display: grid;
+      grid-template-columns: minmax(260px, .9fr) minmax(300px, 1.1fr);
+      gap: clamp(28px, 5vw, 62px);
+      align-items: center;
+      padding: clamp(28px, 5vw, 58px);
+      border: 1px solid rgba(255,255,255,.84);
+      border-radius: 42px;
+      background: rgba(255,255,255,.61);
+      box-shadow:
+        0 28px 70px rgba(74, 53, 112, .14),
+        inset 0 1px 0 rgba(255,255,255,.95);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .logo-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 330px;
+    }
+
+    .logo-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 11% 8%;
+      border-radius: 42%;
+      background: radial-gradient(circle, rgba(123,85,199,.20), rgba(200,231,255,.12) 48%, transparent 70%);
+      filter: blur(14px);
+      transform: scale(.92);
+    }
+
+    .logo {
+      position: relative;
+      width: min(100%, 410px);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 20px 24px rgba(86,52,162,.13));
+      animation: float 4.8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-.4deg); }
+      50% { transform: translateY(-8px) rotate(.4deg); }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--dust-pink-soft);
+      color: var(--violet-deep);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--violet);
+      box-shadow: 0 0 0 5px rgba(123,85,199,.10);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--violet-deep);
+      font-size: clamp(52px, 8vw, 86px);
+      line-height: .92;
+      letter-spacing: -.055em;
+    }
+
+    .lead {
+      max-width: 34rem;
+      margin: 22px 0 0;
+      font-size: clamp(18px, 2.2vw, 22px);
+      line-height: 1.55;
+      color: #554d64;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 21px;
+      border-radius: 16px;
+      color: white;
+      background: linear-gradient(135deg, var(--violet), var(--violet-deep));
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(86,52,162,.23);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 29px rgba(86,52,162,.29);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid rgba(140,200,244,.8);
+      outline-offset: 4px;
+    }
+
+    .email {
+      color: var(--violet-deep);
+      font-size: 14px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .small {
+      margin: 32px 0 0;
+      color: #746b7f;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .page { padding: 20px 14px; }
+      .card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        border-radius: 32px;
+      }
+      .logo-wrap { min-height: 220px; order: -1; }
+      .logo { width: min(88%, 340px); }
+      .eyebrow { margin-inline: auto; }
+      .lead { margin-inline: auto; }
+      .cta-row { justify-content: center; }
+      h1 { font-size: clamp(50px, 17vw, 76px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-labelledby="page-title">
+      <div class="logo-wrap">
+        <img class="logo" src="assets/fidget-fun-logo.png" alt="Fidget Fun logo" width="760" height="640" />
+      </div>
+
+      <div class="content">
+        <p class="eyebrow">Coming soon</p>
+        <h1 id="page-title">Fidget Fun</h1>
+        <p class="lead">We’re getting something fun ready. Our full website will be here soon.</p>
+
+        <div class="cta-row">
+          <a class="button" href="mailto:fidget.fun@icloud.com" aria-label="Email Fidget Fun">
+            Get in touch
+          </a>
+          <span class="email">fidget.fun@icloud.com</span>
+        </div>
+
+        <p class="small">© <span id="year"></span> fidget-fun. All rights reserved.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
