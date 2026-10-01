@@ -50,7 +50,7 @@ a{color:inherit}
 .bats{color:var(--orange);letter-spacing:12px;font-size:23px;margin-top:16px}
 
 .products{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px
 }
 .card{
   position:relative;overflow:hidden;border:2px solid var(--orange);border-radius:28px;
@@ -93,7 +93,8 @@ a{color:inherit}
 .contact a{color:#fff;font-weight:900;text-decoration:none}
 footer{text-align:center;padding:12px 0;color:#8e7c70;font-size:12px}
 
-@media(max-width:850px){
+@media(max-width:1050px){.products{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){
   .products{grid-template-columns:1fr}.card{max-width:620px;margin:auto;width:100%}
   .perks{grid-template-columns:1fr 1fr}
 }
@@ -152,6 +153,17 @@ footer{text-align:center;padding:12px 0;color:#8e7c70;font-size:12px}
     <a class="order" href="mailto:fidget.fun@icloud.com?subject=Order%20-%20Hexagon%20Fractal%20Keyring%20%C2%A31.50&body=Hi%20Fidget%20Fun%2C%0A%0AI%27d%20like%20to%20order%20a%20Hexagon%20Fractal%20Keyring%20at%20%C2%A31.50.%0A%0AQuantity%3A%20%0A%0AThanks!">✉ ORDER BY EMAIL</a>
     <p class="small">Email opens with the item and price filled in.</p>
   </article>
+
+  <article class="card">
+    <span class="web br" aria-hidden="true">🕸</span>
+    <h2><span class="orange">HALLOWEEN</span>FIDGET CUBE</h2>
+    <img class="photo" src="assets/halloween-fidget-cube.jpg" alt="Orange Halloween fidget cube with spooky embossed designs">
+    <div class="price">£2</div>
+    <p class="desc">A spooky articulated fidget cube with Halloween designs and satisfying movement.</p>
+    <a class="order" href="mailto:fidget.fun@icloud.com?subject=Order%20-%20Halloween%20Fidget%20Cube%20%C2%A32&body=Hi%20Fidget%20Fun%2C%0A%0AI%27d%20like%20to%20order%20a%20Halloween%20Fidget%20Cube%20at%20%C2%A32.%0A%0AQuantity%3A%20%0A%0AThanks!">✉ ORDER BY EMAIL</a>
+    <p class="small">Email opens with the item and £2 price filled in.</p>
+  </article>
+
 </main>
 
 <section class="perks" aria-label="Product benefits">
