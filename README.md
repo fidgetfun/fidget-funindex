@@ -1,20 +1,2 @@
-# Fidget Fun GitHub Pages
-
-Upload the CONTENTS of this folder to the root of your GitHub repository.
-
-Required files:
-- index.html
-- products.html
-- 404.html
-- assets/
-
-GitHub Pages:
-Settings → Pages → Deploy from a branch → main → /(root)
-
-Products:
-- Halloween Spiral Cones: 1 for £2 or 2 for £3
-- Pumpkin Fidget: £1
-- Hexagon Fractal Keyring: £1.50
-- Halloween Fidget Cube: £2
-
-Order email: fidget.fun@icloud.com
+# Fidget Fun Christmas 2026
+Upload the contents of this folder (not the ZIP) to the existing GitHub Pages publishing root. Replace index.html, products.html and 404.html. Upload christmas.css and all assets. Keep any existing CNAME file and domain settings unchanged. No build step needed. Orders use the visitor’s email app. Product pictures are cropped from the supplied catalogue.
